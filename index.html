@@ -1,0 +1,19 @@
+<html>
+
+<div id="demo">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<script src="https://unpkg.com/vue@2"></script>
+<script>
+  new Vue({
+    el: '#demo', //Tells Vue to render in HTML element with id "demo"
+    data() {
+      return {
+        message: 'Hello Vue.js!'
+      }
+    }
+  });
+</script>
+</html>

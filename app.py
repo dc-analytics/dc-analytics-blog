@@ -1,13 +1,15 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 
 
 
 app = Flask(__name__)
 
 
-@app.route("/test/<test>")
-def index(test='nothing yet'):
-    return test
+@app.route("/test")
+def index():
+    return send_from_directory('.','index.html')
+
+
 
 
 if __name__ == '__main__':
